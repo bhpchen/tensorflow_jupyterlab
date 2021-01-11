@@ -1,0 +1,9 @@
+FROM tensorflow/tensorflow:latest-gpu-py3
+
+RUN pip install --upgrade pip
+
+RUN pip install jupyterlab
+
+EXPOSE 8888 
+
+ENTRYPOINT ["jupyter","lab","--ip=0.0.0.0","--allow-root"]
